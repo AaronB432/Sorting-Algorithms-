@@ -2,30 +2,33 @@ print("if you finish please type 'solve' ")
 
 var characters = String()
 var arrayOfWords = [String]()
-var arrayOfInts = [Int]()
+
 
 var line : String?
 repeat {
     line = readLine()
-   
+    
     for character in line! {
         characters.append(character)        
-        let value = valueOfLetter(inputLetter: character)     
-        arrayOfInts.append(value)
     }
     arrayOfWords.append(characters)
     characters.removeAll()
-    print(test(arrayOfInt: arrayOfInts))
+
+
 } while line != "solve"
+print(arrayOfWords)
 
-// func for switching the string
-// make a func to test the numbers if it concludes that it is less than, switch. Otherwise leave alone.
+print(test(arrayOfString: arrayOfWords))
 
 
-func test (arrayOfInt: [Int]) -> [Int]{
-    var sort = Array(arrayOfInt)
-    let count  = arrayOfInt.count
-    let alphabet = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+
+
+func test (arrayOfString: [String]) -> [String] {
+    var sort = Array(arrayOfString)
+    let count  = arrayOfString.count
+
+
     
     for i in 0 ..< count - 1 {
         for j in 0 ..< count - i - 1 {
@@ -34,29 +37,5 @@ func test (arrayOfInt: [Int]) -> [Int]{
             }
         }
     }
-       
     return sort
 }
-
-
-
-
-func valueOfLetter(inputLetter: Character) -> Int{
-    var number = 0
-    let alphabet = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    for (index, letter) in alphabet.enumerated() {
-        if letter == inputLetter.lowercased() {
-            number += index
-        }
-        
-
-    }
-    return number
-}
-
-
-
-
-print(arrayOfWords)
-
-
