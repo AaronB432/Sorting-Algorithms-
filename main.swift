@@ -10,19 +10,14 @@ var arrayOfWords = [String]()
 
 var line : String?
 repeat {
-
     line = readLine()
-
     if line != nil {
-
         for c in line! {
-            characters.append(c)
-            
+            characters.append(c)            
         }        
         arrayOfWords.append(characters)
         characters.removeAll()
     }
-
     
 } while line != nil
 
@@ -52,21 +47,21 @@ func divideArray(arrayOfString: [String], range: Range<Int>) -> [String] {
 //print(sort(arrayOfString: arrayOfWords))
 
 
- // final result of the array sorted
- var finalArray = [String]()
- let first = divideArray(arrayOfString: arrayOfWords, range: 0 ..< arrayOfWords.count / 2)
- let split1 = sort(arrayOfString: first)
+// final result of the array sorted
+var finalArray = [String]()
+let first = divideArray(arrayOfString: arrayOfWords, range: 0 ..< arrayOfWords.count / 2)
+let split1 = sort(arrayOfString: first)
 
- let second = divideArray(arrayOfString: arrayOfWords, range: arrayOfWords.count / 2 ..< arrayOfWords.count)
- let split2 = sort(arrayOfString: second)
+let second = divideArray(arrayOfString: arrayOfWords, range: arrayOfWords.count / 2 ..< arrayOfWords.count)
+let split2 = sort(arrayOfString: second)
 
- for word in split1 {
- finalArray.append(word)
- }
- for word in split2 {
- finalArray.append(word)
- }
- print(sort(arrayOfString: finalArray))
+for word in split1 {
+    finalArray.append(word)
+}
+for word in split2 {
+    finalArray.append(word)
+}
+print(sort(arrayOfString: finalArray))
 
- 
+
 
