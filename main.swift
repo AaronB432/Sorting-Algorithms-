@@ -62,7 +62,8 @@ for word in split2 {
     finalArray.append(word)    
 }
 print()
-for word in finalArray {
+let lastSort = sort(arrayOfString: finalArray)
+for word in lastSort {
     print(word)
 }
 
