@@ -60,9 +60,10 @@ for word in split1 {
 for word in split2 {
     finalArray.append(word)
 }
+let lastSort = sort(arrayOfString: finalArray)
 print()
 for word in finalArray {
     print(word)
 }
 
-//print(sort(arrayOfString: finalArray))
+
