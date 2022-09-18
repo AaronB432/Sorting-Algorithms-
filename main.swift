@@ -35,7 +35,7 @@ func sort (arrayOfString: [String]) -> [String] {
     }
     return sort
 }
-print(sort(arrayOfString: arrayOfWords))
+
 
 //function used to split the array
 func divideArray(arrayOfString: [String], range: Range<Int>) -> [String] {
@@ -44,7 +44,7 @@ func divideArray(arrayOfString: [String], range: Range<Int>) -> [String] {
     return firstArray    
 }
 
-//print(sort(arrayOfString: arrayOfWords))
+
 
 
 // final result of the array sorted
@@ -59,9 +59,13 @@ for word in split1 {
     finalArray.append(word)
 }
 for word in split2 {
-    finalArray.append(word)
+    finalArray.append(word)    
 }
-print(sort(arrayOfString: finalArray))
+print()
+for word in finalArray {
+    print(word)
+}
 
+//print(sort(arrayOfString: finalArray))
 
 
