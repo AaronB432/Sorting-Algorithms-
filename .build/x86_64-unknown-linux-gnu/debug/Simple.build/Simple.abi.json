@@ -4,6 +4,13 @@
   "printedName": "TopLevel",
   "children": [
     {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "Simple"
+    },
+    {
       "kind": "Var",
       "name": "characters",
       "printedName": "characters",
@@ -81,14 +88,15 @@
       "moduleName": "Simple",
       "declAttributes": [
         "HasInitialValue",
-        "HasStorage"
+        "HasStorage",
+        "RawDocComment"
       ],
       "hasStorage": true
     },
     {
       "kind": "Function",
-      "name": "test",
-      "printedName": "test(arrayOfString:)",
+      "name": "sort",
+      "printedName": "sort(arrayOfString:)",
       "children": [
         {
           "kind": "TypeNominal",
@@ -120,9 +128,12 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple4test13arrayOfStringSaySSGAD_tF",
-      "mangledName": "$s6Simple4test13arrayOfStringSaySSGAD_tF",
+      "usr": "s:6Simple4sort13arrayOfStringSaySSGAD_tF",
+      "mangledName": "$s6Simple4sort13arrayOfStringSaySSGAD_tF",
       "moduleName": "Simple",
+      "declAttributes": [
+        "RawDocComment"
+      ],
       "funcSelfKind": "NonMutating"
     },
     {
@@ -208,7 +219,8 @@
       "moduleName": "Simple",
       "declAttributes": [
         "HasInitialValue",
-        "HasStorage"
+        "HasStorage",
+        "RawDocComment"
       ],
       "hasStorage": true
     },
