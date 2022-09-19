@@ -28,11 +28,15 @@ func sort (arrayOfString: [String]) -> [String] {
     
     for i in 0 ..< count - 1 {
         for j in 0 ..< count - i - 1 {
-            if sort[j] > sort [j + 1] {
+            if sort[j].uppercased() > sort [j + 1].uppercased() {
+                print("sortj was greater \(sort[j])")
+                sort.swapAt(j, j + 1)
+            }
+            else if sort[j].lowercased() > sort [j + 1].lowercased() {
                 sort.swapAt(j, j + 1)
             }
         }
-    }
+    } 
     return sort
 }
 
@@ -43,7 +47,6 @@ func divideArray(arrayOfString: [String], range: Range<Int>) -> [String] {
     let firstArray = Array(firstHalf)
     return firstArray    
 }
-
 
 
 
@@ -66,6 +69,7 @@ let lastSort = sort(arrayOfString: finalArray)
 for word in lastSort {
     print(word)
 }
+
 
 //print(sort(arrayOfString: finalArray))
 
